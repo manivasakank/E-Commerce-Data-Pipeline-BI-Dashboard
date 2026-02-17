@@ -667,3 +667,47 @@ elif emp_option=="Login":
     
     st.image("staff_login_form.jpg",width=700)
     employee_login()
+create database online_store_management_system;
+use online_store_management_system;
+
+create table customer(customer_id int primary key auto_increment,
+customer_name varchar(100),
+dob varchar(100),
+gender varchar(100),
+email varchar(100),
+phone_no varchar(100),
+city varchar(100),
+state varchar(100),
+user_name varchar(100),
+user_password varchar(100)
+);
+
+select*from customer;
+
+create table products(product_id int primary key auto_increment,
+product_name varchar(100),
+quantity int,
+price_per_quantity int
+);
+
+select*from products;
+
+create table orders(order_id int primary key auto_increment,
+customer_id int,
+product_id int,
+product_name varchar(100),
+quantity int,
+price_per_quantity int,
+total_amount int
+);
+
+create table employee(employee_id int primary key auto_increment,
+first_name varchar(100),
+password_input varchar(100),
+ph_no varchar(100)
+);
+
+select*from customer;
+select*from products;
+select*from orders;
+select*from employee;
